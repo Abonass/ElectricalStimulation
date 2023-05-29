@@ -11,7 +11,7 @@
 
 short spiData,DA;
 char channel = 0;
-unsigned long time;
+//unsigned long times;
 float freq = 1000.0;
 
 /* DA output by AD5452(SPI)*/
@@ -45,4 +45,3 @@ void loop() {
   DA = (short)(2047.99 * (sin(2.0*M_PI*100*(double)t*0.000001)+1.0)); //100Hz sin wave 0.0 (0V) - 4095.0 (2.3V)
   AD5452_DAout(DA);
 }
-
